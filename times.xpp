@@ -1,0 +1,10 @@
+static void ShowCurrentDateTime(Args _args)
+{
+    SystemDateTime systemDateTime;
+    str formattedDateTime;
+
+    systemDateTime = DateTimeUtil::getSystemDateTime();
+    formattedDateTime = DateTimeUtil::toStr(systemDateTime, 123);
+
+    info(strFmt("当前日期和时间：%1", formattedDateTime));
+}
